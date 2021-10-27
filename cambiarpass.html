@@ -4,12 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clase 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Cambiar Pass</title>
     <style>
       :root {
         --sm: 14px;
         --md: 16px;
-        --lg: 18px;
+        --lg: 20px;
       }
       body {
         margin: 0;
@@ -34,13 +40,60 @@
       }
       .title {
         font-size: var(--lg);
+        margin-bottom: 12px;
+        text-align: center;
+      }
+      .subtitle {
+        color: gray;
+        font-size: var(--md);
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      .form {
+        display: flex;
+        flex-direction: column;
+      }
+      .label {
+        font-size: var(--sm);
+        font-weight: bold;
+        margin-bottom: 4px;
+      }
+      .input {
+        background-color: honeydew;
+        border: none;
+        border-radius: 8px;
+        height: 30px;
+        font-size: var(--md);
+        padding: 4px;
+        margin-bottom: 16px;
+      }
+      .primary-button {
+        background-color: #ed5564;
+        border-radius: 4px;
+        border: none;
+        color: white;
+        width: 100%;
+        cursor: pointer;
+        font-size: var(--md);
+        font-weight: bold;
+        height: 50px;
+      }
+      .login-button {
+        margin-top: 14px;
+      }
+      @media (min-width: 640px) {
+        .logo {
+          display: block;
+        }
       }
     </style>
   </head>
   <body>
     <div class="login">
       <div class="form-container">
-        <img src="" alt="logo" class="logo" />
+        <img src="logo.png" alt="logo" class="logo" />
         <h1 class="title">Crear una nueva contraseña</h1>
         <p class="subtitle">Nueva contraseña para tu cuenta</p>
         <form action="" class="form">
@@ -51,7 +104,7 @@
             placeholder="Password"
             class="input input-password"
           />
-          <label for="new-password" class="label">Nueva Password:</label>
+          <label for="new-password" class="label">Nueva Pass:</label>
           <input
             type="password"
             id="new-password"
