@@ -16,6 +16,69 @@
         margin: 0;
         font-family: 'Quicksand';
       }
+      .desktop-menu {
+        width: 100px;
+        height: auto;
+        border: 1px solid gray;
+        border-radius: 6px;
+        padding: 10px 10px 0 10px;
+      }
+      .desktop-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .desktop-menu ul li {
+        text-align: end;
+      }
+      .desktop-menu ul li:nth-child(1),
+      .desktop-menu ul li:nth-child(2) {
+        font-weight: bold;
+      }
+      .desktop-menu ul li:last-child {
+        padding-top: 8px;
+        border-top: 1px solid gray;
+      }
+      .desktop-menu ul li:last-child a {
+        color: green;
+        font-size: 14px;
+      }
+      .desktop-menu ul li a {
+        color: black;
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+      .mobile-menu {
+        padding: 24px;
+      }
+      .mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 24px 0 0;
+      }
+      .mobile-menu ul:nth-child(1) {
+        border-bottom: 1px solid gray;
+      }
+      .mobile-menu ul:last-child {
+        margin-top: 40px;
+      }
+      .mobile-menu ul li {
+        margin-bottom: 14px;
+      }
+      .mobile-menu ul li a {
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+      }
+      .mobile-menu .email {
+        font-size: 12px;
+        font-weight: 300;
+      }
+      .mobile-menu .salir {
+        color: green;
+      }
+
       .cards-container {
         display: grid;
         grid-template-columns: repeat(auto-fill, 240px);
@@ -54,6 +117,9 @@
         color: gray;
       }
       @media (max-width: 640px) {
+        .desktop-menu {
+          display: none;
+        }
         .cards-container {
           grid-template-columns: repeat(auto-fill, 140px);
         }
@@ -68,6 +134,38 @@
     </style>
   </head>
   <body>
+    <div class="desktop-menu">
+      <ul>
+        <li>
+          <a href="" class="title">My Orders</a>
+        </li>
+        <li>
+          <a href="" class="title">Mi cuenta</a>
+        </li>
+        <li>
+          <a href="" class="title">Salir</a>
+        </li>
+      </ul>
+    </div>
+    <div class="mobile-menu">
+      <ul>
+        <li><a href="/">CATERGORIAS</a></li>
+        <li><a href="/">ALL</a></li>
+        <li><a href="/">Electronicos</a></li>
+        <li><a href="/">Ropa</a></li>
+        <li><a href="/">Zapatos</a></li>
+        <li><a href="/">Computacion</a></li>
+        <li><a href="/">Deportes</a></li>
+      </ul>
+      <ul>
+        <li><a href="">Mis Ordenes</a></li>
+        <li><a href="">Mi Cuenta</a></li>
+      </ul>
+      <ul>
+        <li><a href="" class="email">correo@gmail.com</a></li>
+        <li><a href="" class="salir">Salir</a></li>
+      </ul>
+    </div>
     <section class="main-container">
       <div class="cards-container">
         <div class="product-card">
@@ -84,7 +182,7 @@
         </div>
 
         <div class="product-card">
-          <img src="juguete1.jpg" alt="" class="product-img" />
+          <img src="juguete2.jpg" alt="" class="product-img" />
           <div class="product-info">
             <div>
               <p>$120.00</p>
