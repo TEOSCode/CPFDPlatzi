@@ -4,11 +4,105 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Quicksand', sans-serif;
+      }
+      nav {
+        display: flex;
+        border-bottom: 1px solid rgb(212, 212, 212);
+        justify-content: space-between;
+        padding: 0 24px;
+        align-items: center;
+      }
+      .menuicon {
+        display: none;
+        width: 35px;
+        height: 35px;
+      }
+      .logo {
+        width: 35px;
+        height: 35px;
+      }
+      .navbar-left ul,
+      .navbar-right ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        height: 30px;
+      }
+      .navbar-left {
+        display: flex;
+        align-items: center;
+      }
+      .navbar-left ul {
+        margin-left: 12px;
+      }
+      .navbar-left ul a {
+        color: grey;
+      }
+      .navbar-left ul li a,
+      .navbar-right ul li a {
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid white;
+      }
+      .navbar-left ul li a:hover {
+        border: 1px solid green;
+      }
+
+      .navbar-email {
+        color: grey;
+        font-size: 12px;
+        margin-right: 12px;
+      }
+      .shoppingcart {
+        position: relative;
+      }
+      .shoppingcart div {
+        width: 16px;
+        height: 16px;
+        background-color: rgb(134, 255, 134);
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 12px;
+        position: absolute;
+        top: -6px;
+        right: -10px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+      .shoppingcart img {
+        width: 20px;
+      }
+      @media (max-width: 640px) {
+        .menuicon {
+          display: block;
+        }
+        .navbar-left ul {
+          display: none;
+        }
+        .navbar-email {
+          display: none;
+        }
+      }
+    </style>
     <title>Navbarl</title>
   </head>
   <body>
     <nav>
-      <img src="iconmenu.jpg" alt="Menu icon" class="menu" />
+      <img src="iconmenu.png" alt="Menu icon" class="menuicon" />
       <div class="navbar-left">
         <img src="logo.png" alt="Mi logo" class="logo" />
         <ul>
@@ -22,7 +116,7 @@
       </div>
       <div class="navbar-right">
         <ul>
-          <li>platzi@example.com</li>
+          <li class="navbar-email">platzi@example.com</li>
           <li class="shoppingcart">
             <img src="cart.png" alt="shopping cart" />
             <div>2</div>
