@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Quicksand', sans-serif;
+      }
+      .closeimg {
+        width: 16px;
+        margin: 0;
+        padding: 0;
+      }
+      .primary-button {
+        background-color: #ed5564;
+        border-radius: 4px;
+        border: none;
+        color: white;
+        width: 100%;
+        cursor: pointer;
+        font-size: var(--md);
+        font-weight: bold;
+        height: 50px;
+      }
+      .product-detail {
+        width: 360px;
+        padding-bottom: 24px;
+        position: absolute;
+        right: 0;
+      }
+      .close-detail {
+        background-color: rgb(226, 226, 226);
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        padding: 5px;
+        border-radius: 50%;
+      }
+      .close-detail:hover {
+        cursor: pointer;
+      }
+      .product-detail img:nth-child(2) {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+      }
+      .product-info {
+        margin: 0 24px;
+      }
+      .product-info p:nth-child(1) {
+        font-weight: bold;
+        font-size: 12px;
+        margin: 0 0 4px 0;
+      }
+      .product-info p:nth-child(2) {
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-size: 24px;
+      }
+      .product-info p:nth-child(3) {
+        font-size: 12px;
+        color: grey;
+      }
+      .primary-button img {
+        width: 20px;
+        margin-right: 12px;
+      }
+      .add-to-cart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      @media (max-width: 640px) {
+        .product-detail {
+          width: 100%;
+        }
+      }
+    </style>
+    <title>Detalle producto</title>
+  </head>
+  <body>
+    <aside class="product-detail">
+      <div class="close-detail">
+        <img src="close.png" alt="" class="closeimg" />
+      </div>
+
+      <img src="juguete1.jpg" alt="" />
+      <div class="product-info">
+        <p>$35.00</p>
+        <p>Goku</p>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting.
+        </p>
+        <button class="primary-button add-to-cart">
+          <img src="cart.png" alt="add to cart" />
+          Agregar al carrito
+        </button>
+      </div>
+    </aside>
+  </body>
+</html>
